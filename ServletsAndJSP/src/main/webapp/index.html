@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>AddParts</title>
+<script type = "text/javascript">
+function validate() {
+    let x = document.getElementById("price").value;
+    if (isNaN(x)) {
+    	alert("Please enter a number in the 'price' field")
+    	return(false);
+    }
+}
+      </script>
+</head>
+<body>
+	<form action = "addItemServlet" method = "post" name="myForm">
+		Part: <input type = "text" name = "part" id="part" required>
+		Price: <input type = "number" name = "price" id="price" required>
+		<input type = "submit" value = "Add Item" onclick="validate()">
+</form> <br />
+<a href = "viewAllItemsServlet">View cart</a>
+</body>
+</html>
